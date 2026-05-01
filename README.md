@@ -79,7 +79,7 @@ SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 # GPT-2 Medium Proof Bundle
 
 To validate that the routed `3 chunks + 2 routers` GPT-2 medium design matches
-the monolithic `/home/nu/ChenLab/ScaleChipletThesis/gpt2pipeline/golden/newest_gpt2_medium.cpp` reference provided by Paul 
+the monolithic `/ScaleChipletThesis/gpt2pipeline/golden/newest_gpt2_medium.cpp` reference provided by Paul 
 
 First copy golden_io folder into /ScaleChipletThesis/gpt2pipeline/golden/gpt2_medium_3chunk_proof_bundle_20260430/,
 
@@ -115,13 +115,13 @@ cd gpt2pipeline/golden/gpt2_medium_3chunk_proof_bundle_20260430
 ```
 
 # GPT-2 Synth & Link
-Code is ready in /home/nu/ChenLab/ScaleChipletThesis/gpt2pipeline/3prompt to synth and link:
+Code is ready in /ScaleChipletThesis/gpt2pipeline/3prompt to synth and link:
 cd gpt2pipeline/3prompt
 export PLATFORM=/path/to/your/platform.xpfm
 ./run_all_csynth.sh && ./build_all_xo.sh && ./link_300mhz.sh
 
 # GPT-2 Onboard Results
-/home/nu/ChenLab/ScaleChipletThesis/gpt2pipeline/onboards holds onboard for my design
+/ScaleChipletThesis/gpt2pipeline/onboards holds onboard for my design
 You can run with 2 prompt design or 3 prompt design on device.
 
 # BestOf3 Voting Scheme 
