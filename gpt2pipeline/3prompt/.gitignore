@@ -1,0 +1,7 @@
+csynth_prj/
+p/
+logs/
+*.xo
+build_link/
+host_gpt2_medium_3prompt
+host_gpt2_medium_3prompt_arb

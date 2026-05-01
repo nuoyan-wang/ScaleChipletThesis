@@ -1,0 +1,15 @@
+.vscode
+.env
+
+mlir_venv
+build
+polygeist
+__pycache__/
+output/
+
+# Generated sample artifacts
+samples/pytorch/*/final*_tosa.mlir
+samples/pytorch/*/output/chiplets.mlir
+samples/pytorch/*/output/chiplets_split/
+samples/pytorch/*/output_verify/
+samples/pytorch/*/output/debug_costcluster/
