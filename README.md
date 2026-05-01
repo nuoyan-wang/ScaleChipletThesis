@@ -1,2 +1,8 @@
-# ScaleChipletThesis
+## ScaleChipletThesis
 This a public repository of M.S Thesis project of Nuoyan Wang
+
+# Frontend: ScaleChiplet
+We built ScaleChiplet as the front end of a multi-chiplet compilation flow: starting from PyTorch, we lower into TOSA/MLIR, outline the graph into a custom chiplet dialect, annotate task costs and dependencies, assign work across an arbitrary number of chiplets, insert explicit inter-chiplet send/receive edges, and finally materialize per-chiplet functions for downstream lowering. In practice, that gave us a flexible partitioner that could split models either by a fixed chiplet count or by more guided placement choices, while preserving a clean compiler representation of communication and placement
+
+# Backend: ScaleHLS / Tensor-MLIR
+For backend lowering, we reused and adapted existing HLS-oriented infrastructure rather than inventing a new codegen stack from scratch. The downstream path borrows from both ScaleHLS-style MLIR lowering and Paul’s Tensor-MLIR flow, using tensor-mlir to lower split chiplets into HLS-ready C++ and then wrapping them for export as hardware IPs. Our main case study was a manually optimized 3-chiplet GPT-2 pipeline: chunk0 handled LN1, QKV, KV-cache update, attention, and output projection; chunk1 handled LN2, FC1, and GELU; chunk2 handled FC2 and the final residual. We then hand-tuned the generated kernels with reproducible patch scripts, added stream-oriented wrappers and routers, and assembled a 5-kernel streaming design c0_router -> chunk0 -> chunk1 -> chunk2 -> c2_router, which we validated against the monolithic baseline before driving from the XRT host runtime.
