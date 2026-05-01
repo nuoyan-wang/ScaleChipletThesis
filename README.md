@@ -76,7 +76,10 @@ SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 
 ## To ensure correctness of flow, all outputs should work with downstream emitter, and output of GPT2 Medium should match optimal model
 
-# GPT-2 Medium Proof Bundle
+# GPT-2 Medium Proof Bundle, Start with MLIR to CPP
+cd /ScaleChipletThesis/gpt2pipeline/golden-mlir
+python3 lower/lower_chunks.py
+
 
 To validate that the routed `3 chunks + 2 routers` GPT-2 medium design matches
 the monolithic `/ScaleChipletThesis/gpt2pipeline/golden/newest_gpt2_medium.cpp` reference provided by Paul 
