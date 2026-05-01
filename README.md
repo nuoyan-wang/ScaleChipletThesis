@@ -76,6 +76,10 @@ SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 
 ## To ensure correctness of flow, all outputs should work with downstream emitter, and output of GPT2 Medium should match optimal model
 
+# CNN, Start with MLIR to CPP
+Download ScaleHLS at https://github.com/UIUC-ChenLab/ScaleHLS
+Follow instruction for install and run on each of your output MLIR files, stitch top
+
 # GPT-2 Medium Proof Bundle, Start with MLIR to CPP
 cd /ScaleChipletThesis/gpt2pipeline/golden-mlir
 python3 lower/lower_chunks.py
