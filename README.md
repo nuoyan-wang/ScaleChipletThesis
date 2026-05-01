@@ -128,3 +128,27 @@ export PLATFORM=/path/to/your/platform.xpfm
 You can run with 2 prompt design or 3 prompt design on device.
 
 # BestOf3 Voting Scheme 
+Run the GPT-2 Medium Best-of-3 voting simulation from the bundled `gpt2-bo3` folder:
+
+
+```bash
+cd gpt2pipeline/gpt2-bo3
+python3 scripts/compare_mlx_single_vs_best_of_3.py \
+ --model models/gpt2-medium-mlx-8bit \
+ --prompts data/prompts_100_len2.txt \
+ --max-new-tokens 16 \
+ --temperature 2.0 \
+ --top-k 25 \
+ --seed 7 \
+ --degradation softened-logits \
+ --output-json results/mlx_softened_temp20_top25_len2_comparison.json \
+ --output-csv results/mlx_softened_temp20_top25_len2_comparison.csv \
+ --output-list-csv results/mlx_softened_temp20_top25_len2_perplexity_list.csv
+```
+
+
+# Conclusions
+With full MLIR to Chiplet-MLIR workflow, usage of Paul's flow, real onboard deployment, csim tests,
+reviewed host code, and additional simulations with matching results, the codebase is complete.
+
+
