@@ -107,7 +107,7 @@ SCALECHIPLET_OPT_BIN=/home/nu/ChenLab/TosaFlow/build/bin/tosa-flow-opt \
 
 ## Online Build Commands
 ## GPT2 Small
-cd /ChenLab/ScaleChipletThesis/ScaleChiplet-Compile
+cd /ScaleChipletThesis/ScaleChiplet-Compile
 
 SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 ./scripts/run_scalechiplet_flow.sh \
@@ -116,7 +116,7 @@ SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
   3
 
 ## GPT2 Medium
-cd /ChenLab/ScaleChipletThesis/ScaleChiplet-Compile
+cd /ScaleChipletThesis/ScaleChiplet-Compile
 
 SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 ./scripts/run_scalechiplet_flow.sh \
@@ -125,7 +125,7 @@ SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
   3
 
 ## MobileNet
-cd /ChenLab/ScaleChipletThesis/ScaleChiplet-Compile
+cd /ScaleChipletThesis/ScaleChiplet-Compile
 
 SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 ./scripts/run_scalechiplet_flow.sh \
@@ -134,7 +134,7 @@ SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
   3
 
 ## ResNet18
-cd /ChenLab/ScaleChipletThesis/ScaleChiplet-Compile
+cd /ScaleChipletThesis/ScaleChiplet-Compile
 
 SCALECHIPLET_OPT_BIN=build/bin/scale-chiplet-opt \
 ./scripts/run_scalechiplet_flow.sh \
